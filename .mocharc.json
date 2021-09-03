@@ -1,0 +1,8 @@
+{
+  "recursive": true,
+  "timeout": 60000,
+  "require": ["test/hooks.ts"],
+  "jobs": 1,
+  "retries": 1,
+  "exit": true
+}

@@ -1,0 +1,1 @@
+export type NotificationHandleFunc = (message: any) => Promise<void|never>

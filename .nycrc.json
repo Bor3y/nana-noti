@@ -1,0 +1,8 @@
+{
+  "reporter": [
+    "json-summary",
+    "lcov",
+    "html"
+  ],
+  "report-dir": "coverage"
+}

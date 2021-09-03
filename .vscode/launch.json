@@ -1,0 +1,42 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch Program",
+      "type": "node",
+      "program": "${workspaceFolder}/dist/server.js",
+      "request": "launch",
+      "preLaunchTask": "npm: build",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "name": "Launch SMS worker",
+      "type": "node",
+      "program": "${workspaceFolder}/dist/workers/sms.js",
+      "request": "launch",
+      "preLaunchTask": "npm: build",
+      "envFile": "${workspaceFolder}/.env"
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach by Process ID",
+      "processId": "${command:PickProcess}",
+      "protocol": "inspector"
+    },
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Mocha tests",
+      "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+      "args": [
+        "-r",
+        "ts-node/register",
+        "'test/**/*.ts'"
+      ],
+      "skipFiles": [
+        "<node_internals>/**"
+      ]
+    },
+  ]
+}
