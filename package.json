@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "build-ts": "tsc",
-    "build": "yarn run build-ts && yarn run lint",
+    "build": "yarn run build-ts",
     "debug": "yarn run build && yarn run watch-debug",
     "lint": "tsc --noEmit && eslint \"**/*.{js,ts}\" --quiet --fix",
     "serve-debug": "nodemon --inspect dist/server.js",
